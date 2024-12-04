@@ -17,5 +17,7 @@ services:
     command: yes database
 
   users:
-    build: ./users
+    build:
+      context: ./users
+      dockerfile: Dockerfile
     command: /bin/sh -c "while true; do echo users; done"
